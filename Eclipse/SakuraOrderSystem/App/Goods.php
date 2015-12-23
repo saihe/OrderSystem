@@ -17,7 +17,7 @@
 		return $goods[$goodsNo][0] . "\t" . $goods[$goodsNo][1] . "円";
 	}
 
-	//商品一覧をテーブルに表示し、ボタンを押すと商品が注文リストに追加される
+	//商品一覧をテーブルに表示し、ボタンを押すと商品が注文リストに追加されるようにしたい
 	function getAllGoods($goods){
 		foreach ($goods as $val){
 			print "<tr><td>" . $val[0] . "</td><td>" . $val[1] . "円</td><td><input type='button' value='追加'></td></tr>";
