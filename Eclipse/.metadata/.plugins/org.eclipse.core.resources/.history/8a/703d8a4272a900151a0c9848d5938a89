@@ -1,0 +1,4 @@
+<?php
+	require_once 'Goods.php';
+	print getGoods($allGoods, "F001");
+?>
