@@ -1,0 +1,23 @@
+<?php
+// Goodsクラスの読み込み
+require_once 'Goods.php';
+
+$res = "";
+
+if (isset ( $_POST ["submit"] )) {
+	// GoodsクラスのgetGoods()を使う
+	$res = getGoods ( $allGoods, "F001" );
+} else {
+	$res = "";
+}
+?>
+<html>
+<head>
+</head>
+<body>
+	<form action="">
+		<input type="submit">
+	</form>
+	<p><?php print $res; ?></p>
+</body>
+</html>

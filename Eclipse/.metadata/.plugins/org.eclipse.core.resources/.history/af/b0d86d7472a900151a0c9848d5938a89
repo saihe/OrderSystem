@@ -1,0 +1,13 @@
+<?php
+	//Goodsクラスの読み込み
+	require_once 'Goods.php';
+
+	//GoodsクラスのgetGoods()を使う
+	$res = getGoods($allGoods, "F001");
+?>
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
