@@ -37,13 +37,13 @@ print_r($_POST);
 	<span id="cntF001">0</span>
 	<br>
 		<?php
-			/*foreach ($name as $key => $val){
+			foreach ($name as $key => $val){
 				print '<input type="button" name="button' . $key . '" value="'. $key . 'ボタン" onClick="'. $key . '()">';
 				print "<br>";
 				print '<input id="count' . $key . '" type="hidden" name=" '. $key . '" value="0">';
 				print '<span id="cnt'. $key . '"></span>';
 				print "<br>";
-			}*/
+			}
 		?>
 		<input type="submit" value="送信" name="submit">
 	</form>

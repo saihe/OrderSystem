@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;Chrome HTML Document&quot; name=&quot;TestClass.php&quot; tooltip=&quot;SakuraOrderSystem/App/TestClass.php&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SakuraOrderSystem/App/TestClass.php&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.php.editor&quot; name=&quot;TestSelectButton.php&quot; tooltip=&quot;SakuraOrderSystem/App/TestSelectButton.php&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SakuraOrderSystem/App/TestSelectButton.php&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.php.editor&quot; name=&quot;Goods.php&quot; tooltip=&quot;SakuraOrderSystem/App/Goods.php&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SakuraOrderSystem/App/Goods.php&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.php.editor&quot; name=&quot;Operation.php&quot; tooltip=&quot;SakuraOrderSystem/App/Operation.php&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SakuraOrderSystem/App/Operation.php&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_ceFeQqluEeWuOs27JvmrYQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_ctyHIaluEeWuOs27JvmrYQ" label="%trimmedwindow.label.eclipseSDK" x="676" y="0" width="697" height="745">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_ceFeQqluEeWuOs27JvmrYQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_ctyHIaluEeWuOs27JvmrYQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="697" height="745">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -152,7 +152,7 @@
                 </children>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_iuu8_KluEeWuOs27JvmrYQ" elementId="bottom" containerData="2500" selectedElement="_iuu8_qluEeWuOs27JvmrYQ">
-                <children xsi:type="advanced:Placeholder" xmi:id="_iuu8_aluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.views.ProblemView" toBeRendered="false" ref="_c3sREKluEeWuOs27JvmrYQ"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_iuu8_aluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.views.ProblemView" ref="_c3sREKluEeWuOs27JvmrYQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_iuu8_qluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_c3s4I6luEeWuOs27JvmrYQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_iuu8_6luEeWuOs27JvmrYQ" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_c3s4JKluEeWuOs27JvmrYQ"/>
               </children>
@@ -184,7 +184,7 @@
         <tags>EditorStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_imjJ4Ko1EeW5HN0fO5jl6A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TestSelectButton.php" iconURI="platform:/plugin/org.eclipse.php.ui/icons/full/obj16/phpfile.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.php.editor&quot; name=&quot;TestSelectButton.php&quot; partName=&quot;TestSelectButton.php&quot; title=&quot;TestSelectButton.php&quot; tooltip=&quot;SakuraOrderSystem/Test/TestSelectButton.php&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SakuraOrderSystem/Test/TestSelectButton.php&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;592&quot; selectionTopPixel=&quot;30&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.php.editor&quot; name=&quot;TestSelectButton.php&quot; partName=&quot;TestSelectButton.php&quot; title=&quot;TestSelectButton.php&quot; tooltip=&quot;SakuraOrderSystem/Test/TestSelectButton.php&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SakuraOrderSystem/Test/TestSelectButton.php&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;583&quot; selectionTopPixel=&quot;323&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.php.editor</tags>
           <tags>removeOnHide</tags>
@@ -203,7 +203,7 @@
       <toolbar xmi:id="_c8t7AKluEeWuOs27JvmrYQ" elementId="com.eclipserunner.views.RunnerView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_c3sREKluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="&#x554f;&#x984c;" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;&#x554f;&#x984c;&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;&#x30a8;&#x30e9;&#x30fc;&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;&#x30a8;&#x30e9;&#x30fc; (1 &#x9805;&#x76ee;)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;&#x554f;&#x984c;&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_dT0zcKluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.views.ProblemView">
@@ -312,7 +312,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cwSBgKluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_J3LC4KoxEeW5HN0fO5jl6A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="&#x5370;&#x5237;" command="_ceo4HKluEeWuOs27JvmrYQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_pqbkwKvUEeWKn6-wUFGz_A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="&#x5370;&#x5237;" command="_ceo4HKluEeWuOs27JvmrYQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cwSBgaluEeWuOs27JvmrYQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -336,7 +336,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cwSBhaluEeWuOs27JvmrYQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_J3NfIKoxEeW5HN0fO5jl6A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="&#x30a8;&#x30c7;&#x30a3;&#x30bf;&#x30fc;&#x306e;&#x30d4;&#x30f3;&#x7559;&#x3081;" type="Check" command="_ceoQ8KluEeWuOs27JvmrYQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_pqeBAavUEeWKn6-wUFGz_A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="&#x30a8;&#x30c7;&#x30a3;&#x30bf;&#x30fc;&#x306e;&#x30d4;&#x30f3;&#x7559;&#x3081;" type="Check" command="_ceoQ8KluEeWuOs27JvmrYQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cwSokKluEeWuOs27JvmrYQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
