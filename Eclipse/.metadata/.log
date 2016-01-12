@@ -8260,3 +8260,62 @@ Caused by: org.eclipse.swt.SWTException: Widget is disposed
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
 	... 97 more
+!SESSION 2016-01-09 22:48:18.198 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2016-01-09 22:48:34.010
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-01-09 22:48:34.010
+!MESSAGE ALT+CTRL+C の競合が発生しました:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(AnyEdit.capitalize.command,先頭文字のみ大文字,
+		,
+		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@74355746,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.actions.KeyActionCommand,変更ログ・エントリーの挿入,
+		Insert a ChangeLog entry,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b02909d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CommitCommand,コミット...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c0697c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.php.debug.core 4 4 2016-01-09 22:48:35.182
+!MESSAGE Could not obtain PHP executable info.
+!STACK 0
+org.eclipse.php.internal.debug.core.PHPExeException: Invalid PHP executable: C:\Users\User\Downloads\ã½ããé¢ä¿7\pleiades\xampp\php\php.exe.
+	at org.eclipse.php.internal.debug.core.PHPExeUtil.getPHPInfo(PHPExeUtil.java:203)
+	at org.eclipse.php.internal.debug.core.preferences.PHPexeItem.detectFromPHPExe(PHPexeItem.java:128)
+	at org.eclipse.php.internal.debug.core.preferences.PHPexeItem.<init>(PHPexeItem.java:114)
+	at org.eclipse.php.internal.debug.core.preferences.PHPexes.load(PHPexes.java:513)
+	at org.eclipse.php.internal.debug.core.preferences.PHPexes.<init>(PHPexes.java:98)
+	at org.eclipse.php.internal.debug.core.preferences.PHPexes.getInstance(PHPexes.java:90)
+	at org.eclipse.php.internal.debug.core.debugger.AbstractDebuggerSettingsProvider.exists(AbstractDebuggerSettingsProvider.java:231)
+	at org.eclipse.php.internal.debug.core.debugger.AbstractDebuggerSettingsProvider.load(AbstractDebuggerSettingsProvider.java:296)
+	at org.eclipse.php.internal.debug.core.debugger.DebuggerSettingsProviderRegistry.fetchProviders(DebuggerSettingsProviderRegistry.java:154)
+	at org.eclipse.php.internal.debug.core.debugger.DebuggerSettingsProviderRegistry.readFromExtensionPoint(DebuggerSettingsProviderRegistry.java:109)
+	at org.eclipse.php.internal.debug.core.debugger.DebuggerSettingsProviderRegistry.getProviders(DebuggerSettingsProviderRegistry.java:83)
+	at org.eclipse.php.internal.debug.core.debugger.DebuggerSettingsProviderRegistry.getProvider(DebuggerSettingsProviderRegistry.java:74)
+	at org.eclipse.php.internal.debug.core.debugger.DebuggerSettingsManager.<init>(DebuggerSettingsManager.java:173)
+	at org.eclipse.php.internal.debug.core.debugger.DebuggerSettingsManager.<clinit>(DebuggerSettingsManager.java:40)
+	at org.eclipse.php.internal.debug.core.PHPDebugPlugin$PostStart.perform(PHPDebugPlugin.java:117)
+	at org.eclipse.php.internal.debug.core.PHPDebugPlugin$PostStart.access$0(PHPDebugPlugin.java:103)
+	at org.eclipse.php.internal.debug.core.PHPDebugPlugin$PostStart$1.run(PHPDebugPlugin.java:81)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
