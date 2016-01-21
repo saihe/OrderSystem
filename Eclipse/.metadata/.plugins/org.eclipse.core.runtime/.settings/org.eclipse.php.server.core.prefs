@@ -1,3 +1,0 @@
-defaultPHPServer=xampp/htdocs
-eclipse.preferences.version=1
-phpServers=<server><hostname>localhost</hostname><port>82</port><debuggerId>org.eclipse.php.debug.core.xdebugDebugger</debuggerId><document_root>C\:\\xampp\\htdocs</document_root><name>xampp/htdocs</name><base_url>http\://localhost</base_url><id>php-server-725c55b6-d37d-4866-a0b2-c3e52545d4e2</id></server>\u0005<server><hostname>localhost</hostname><port>-1</port><debuggerId>org.eclipse.php.debug.core.noneDebugger</debuggerId><document_root></document_root><name>Default PHP Web Server</name><base_url>http\://localhost</base_url><id>php-server-abff9ef4-7772-45a1-8140-ac5cb9e02d1e</id></server>
