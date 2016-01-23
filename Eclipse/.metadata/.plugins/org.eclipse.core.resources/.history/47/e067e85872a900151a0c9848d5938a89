@@ -1,7 +1,0 @@
-<?php
-	//Goodsクラスの読み込み
-	require_once 'Goods.php';
-
-	//GoodsクラスのgetGoods()を使う
-	print getGoods($allGoods, "F001");
-?>
