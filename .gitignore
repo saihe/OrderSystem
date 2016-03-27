@@ -1,4 +1,4 @@
-﻿*.pydevproject
+*.pydevproject
 .metadata
 .gradle
 bin/
