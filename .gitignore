@@ -40,4 +40,4 @@ local.properties
 
 # STS (Spring Tool Suite)
 .springBeans
-/mysql-connector-java-5.1.38
+/lib/mysql-connector-java-5.1.38
