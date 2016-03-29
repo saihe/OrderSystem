@@ -7,7 +7,7 @@ try{
   if($con -> getRes() == TRUE){
     header("Location: ../index.php/DBConnctionOK");
   }
-}catch(ModelException $e){
+}catch(OrderSystemException $e){
   echo $e -> getMessage();
 }
 ?>
