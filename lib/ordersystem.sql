@@ -39,11 +39,11 @@ CREATE TABLE IF NOT EXISTS `customers` (
 -- --------------------------------------------------------
 
 --
--- テーブルの構造 `historieds`
+-- テーブルの構造 `histories`
 --
 
-DROP TABLE IF EXISTS `historieds`;
-CREATE TABLE IF NOT EXISTS `historieds` (
+DROP TABLE IF EXISTS `histories`;
+CREATE TABLE IF NOT EXISTS `histories` (
   `id` int(255) NOT NULL,
   `customer_id` varchar(32) DEFAULT NULL COMMENT 'yyyymmdd_hhmm_[0-9][0-9]',
   `product_id` int(128) DEFAULT NULL,
@@ -79,9 +79,9 @@ ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `historieds`
+-- Indexes for table `histories`
 --
-ALTER TABLE `historieds`
+ALTER TABLE `histories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -95,9 +95,9 @@ ALTER TABLE `products`
 --
 
 --
--- AUTO_INCREMENT for table `historieds`
+-- AUTO_INCREMENT for table `histories`
 --
-ALTER TABLE `historieds`
+ALTER TABLE `histories`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `products`
