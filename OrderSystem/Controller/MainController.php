@@ -1,39 +1,47 @@
 <?php
 //クラスインポート
 require_once "../Model/AccessDB.php";
-$result;
-$res;
+require_once "../Model/SelectController.php";
 
-try{
-  $accessDB = new AccessDB();
-  if($accessDB -> getRes() == TRUE){
-    try{
-      session_start();
-			//クエリ実行
-			$stmt = $accessDB -> getPDO() -> prepare("select * from products");
-			$res = $stmt -> execute(null);
+//パス指定
+$location;
+$view = "../View";
+$path = array(
+  "top" => $view . "/top.php",
+  "menu" => $view . "/menu.php",
+  "confirm" => $view . "/confirm.php"
+);
 
-			//データベースのテーブル取得
-			$i = 0;
-			while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
-				//1行ずつ配列に追加
-				$result[$i] = $row;
-				$i++;
-			}
-		}catch (PDOExeption $e){
-			$res = $e -> getMassage();
-		}
-    finally{
-      foreach($result as $key => $val){
-        foreach($val as $k => $v){
-          $_SESSION[$k] = $v;
-        }
-      }
-      session_write_close();
-      header("Location: ../View/menu.php/");
+if(isset($_GET["ancer"])){
+  $ancer = $_GET["ancer"];
+  //レコード格納用
+  $result = array();
+  try{
+    $accessDB = AccessDB::getInstanse();
+    $selectCon = new SelectController();
+
+    /**
+    *商品一覧取得、格納
+    */
+    $result = $selectCon -> selectTable($accessDB -> getPDO(), array("name", "unit_price"), "products");
+    session_start();
+    for($i = 0; $i < count($result); $i++){
+      $_SESSION["record" . $i] = $result[$i];
     }
+    session_write_close();
+    if($ancer == "all" || $ancer == "drink" || $ancer == "food" || $ancer == "none"){
+      $location = $path["menu"];
+    }
+    else if($_GET["ancer"] == "confirm"){
+      $location = $path["confirm"];
+    }
+  }catch(OrderSystemException $e){
+    $location = $path["top"];
+    session_start();
+    $_SESSION["ErrMsg"] = $e -> getMessage();
+    session_write_close();
+  }finally{
+    header("Location: " . $location);
   }
-}catch(OrderSystemException $e){
-  echo $e -> getMessage();
 }
 ?>

@@ -1,16 +1,18 @@
-<?php
-  session_start();
-  $s = $_SESSION;
-  session_destroy();
-?>
 <!DOTTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="../../CSS/common.css">
 </head>
 <title>メニュー</title>
 <body>
-<?php
-  var_dump($s);
-?>
+  <div id="content">
+  <?php
+    include "../Util/SessionRun.php";
+    include "../Util/PrintErrMsg.php";
+    include "../Util/navi.php";
+    include "../Util/PrintProducts.php";
+    include "../Util/SessionStop.php";
+  ?>
+  </div>
 </body>
 </html>
