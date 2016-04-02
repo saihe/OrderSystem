@@ -10,7 +10,7 @@
       <?php
         include "../Util/SessionRun.php";
         include "../Util/PrintErrMsg.php";
-        include "../Util/navi.php";
+        include "../Util/PrintNavi.php";
         include "../Util/PrintProducts.php";
         //デバッグ用にクッキーを生かすためにコメントアウト
         //include "../Util/SessionStop.php";

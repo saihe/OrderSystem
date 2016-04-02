@@ -9,7 +9,7 @@
   <?php
     include "../Util/SessionRun.php";
     include "../Util/PrintErrMsg.php";
-    include "../Util/navi.php";
+    include "../Util/PrintNavi.php";
     include "../Util/SessionStop.php";
   ?>
   <p>注文履歴確認</p>
