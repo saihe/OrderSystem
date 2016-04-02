@@ -2,6 +2,17 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="../../CSS/common.css">
+  <style>
+    body{
+      height: 500px;
+      margin-top: 100px;
+      padding: auto;
+    }
+    p{
+      background-color: #EEEEFF;
+      font-size: 40px;
+    }
+  </style>
 </head>
 <title>トップページ</title>
 <body>

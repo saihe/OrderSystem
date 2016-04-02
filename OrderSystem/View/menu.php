@@ -6,13 +6,17 @@
 <title>メニュー</title>
 <body>
   <div id="content">
-  <?php
-    include "../Util/SessionRun.php";
-    include "../Util/PrintErrMsg.php";
-    include "../Util/navi.php";
-    include "../Util/PrintProducts.php";
-    include "../Util/SessionStop.php";
-  ?>
+    <form method="POST" action="../Controller/MainController.php">
+      <?php
+        include "../Util/SessionRun.php";
+        include "../Util/PrintErrMsg.php";
+        include "../Util/navi.php";
+        include "../Util/PrintProducts.php";
+        //デバッグ用にクッキーを生かすためにコメントアウト
+        //include "../Util/SessionStop.php";
+      ?>
+      <input type="submit" name="submit" value="注文する">
+    </form>
   </div>
 </body>
 </html>

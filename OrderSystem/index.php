@@ -1,3 +1,3 @@
 <?php
-header("Location: ./Controller/MainController.php?ancer=none");
+header("Location: ./Controller/MainController.php");
 ?>

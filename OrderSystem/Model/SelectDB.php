@@ -2,6 +2,8 @@
 /**
 *レコード取得メソッドを持つクラス
 */
+require_once "Product.php";
+
 class SelectDB{
   /**
   *@method doSelect
@@ -10,18 +12,19 @@ class SelectDB{
   *@param $params 絞り込み条件
   */
   public function doSelect($PDO, $sql, $params){
-    $result = array();
+    $records = array();
     try{
       //クエリ実行
       var_dump($sql);
       $stmt = $PDO -> prepare($sql);
-      $res = $stmt -> execute(null);
+      $res = $stmt -> execute();
 
       //データベースのテーブル取得
       $i = 0;
       while($row = $stmt -> fetch(PDO::FETCH_ASSOC)){
-        //1行ずつ配列に追加
-        $result[$i] = $row;
+        //Produtcオブジェクトをクッキーに保存できるようにシリアル化して、配列に保存
+        $product = serialize(new Product($row["cord"], $row["name"], $row["unit_price"]));
+        $records[$i] = $product;
         $i++;
       }
       $i = null;
@@ -29,7 +32,7 @@ class SelectDB{
       throw new OrderSystemException("M001");
     }
     finally{
-      return $result;
+      return $records;
     }
   }
 }

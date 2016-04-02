@@ -16,8 +16,9 @@ class SelectController{
   *@param $PDO PDO
   *@param $column 取得カラム
   *@param $table レコード取得テーブル
+  *@param $parameter レコード取得用絞り込み条件
   */
-  public function selectTable($PDO, Array $column, $table){
+  public function selectTable($PDO, Array $column, $table, $parameter){
     //SQL文作成
     $sql = "SELECT ";
     for($i = 0; $i < count($column); $i++){
@@ -27,7 +28,10 @@ class SelectController{
       }
     }
     $sql .= " FROM " . $table;
-    return $this -> selectDB -> doSelect($PDO, $sql, null);
+    if($parameter != null){
+      $sql .= " WHERE type_id = ". $parameter;
+    }
+    return $this -> selectDB -> doSelect($PDO, $sql, $parameter);
   }
 }
 ?>
