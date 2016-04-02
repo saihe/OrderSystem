@@ -25,8 +25,8 @@ foreach($rec as $key => $val){
       <input type="button" value="-" name="dec{$product -> getId()}">
     </td>
     <td>
-      0
-      <input type="hidden" value="0" name="{$product -> getId()}">
+      <span id="span{$product -> getId()}"></span>
+      <input type="hidden" value="0" name="hidden{$product -> getId()}">
     </td>
   </tr>
 TABLE;

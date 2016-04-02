@@ -58,11 +58,11 @@ if(!empty($_GET["ancer"])){
     header("Location: " . $location);
   }
 }
-//POSTメソッド使っていたら
+//POSTメソッドを使っていたら
 else if(!empty($_POST["submit"])){
   var_dump($_POST);
 }
-//何かあったら
+//リクエストパラメータがなかったら
 else{
   header("Location: ../View/top.php");
 }
