@@ -13,7 +13,7 @@
         include "../Util/PrintNavi.php";
         include "../Util/PrintProducts.php";
         //デバッグ用にクッキーを生かすためにコメントアウト
-        //include "../Util/SessionStop.php";
+        include "../Util/SessionStop.php";
       ?>
       <input type="submit" name="submit" value="注文する">
     </form>
