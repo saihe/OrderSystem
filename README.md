@@ -3,6 +3,14 @@
 
 
 ### Ver0.2
+- 20160402
+	+ 1. 初めて来たときはtop.phpへ飛ばす
+	+ 2. アンカーにより出力商品を絞り込めるようにした
+	+ 3. POSTメソッドでパラメータをダンプ
+	+ 4. DBに枝豆追加
+	+ 5. prodeuctテーブル変更
+	+ 6. product_typesテーブル追加
+	+ 7. DBダンプ
 - 20160401
 	+ 1. AccessDBのシングルトン化
 	+ 2. SelectDBをSelectControllerから実行
