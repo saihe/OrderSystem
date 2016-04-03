@@ -7,7 +7,8 @@ class OrderSystemException extends Exception{
                       "S002" => "通信エラー"
                     ),
                     "M" => array(
-                      "M001" => "レコード取得エラー"
+                      "M001" => "URLが無効です",
+                      "M002" => "レコード取得エラー"
                     )
                   );
 

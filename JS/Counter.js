@@ -1,64 +1,65 @@
-/**
-*
-*/
-//カウントボタン
-//hiddenフォームpost送信用
-var amounts = [];
-var prices = [];
-//spanタグ格納用
+//表示spanタグ
 var spans = [];
-//spanタグ表示用
-var counts = [];
-//合計金額
-var totals = [];
-var total;
-var postTotal;
+//フォーム送信hiddenパラメータ
+var hiddens = [];
+//注文情報orders.name = amounts
+var orders = [];
 
-//読み込み
+//タグなど取得
 function onLoad(){
-  //spanタグすべて取得
-  for(key in document.getElementsByTagName("span")){
-  //Counter全て取得
-    if(key.includes("Counter")){
-      //spanタグのCounterを取得
-      spans[key] = document.getElementById(key);
-      //表示用カウントリセット
-      counts[key] = 0;
-      //hiddenフォーム取得
-      amounts[key.substr(0, 9)] = document.getElementById(key.substr(0, 9));
-      prices[key.substr(0, 4) + "Price"] = document.getElementById(key.substr(0, 4) + "Price");
-      totals[key.substr(0, 4) + "Total"] = 0;
-      postTotal = document.getElementById("postTotal");
+  for(var key in document.getElementsByTagName("span")){
+    //注文個数表示span
+    if(key.includes("span")){
+      spans[key.substr(4, 6)] = document.getElementById(key);
+    }
+    //商品名表示span
+    if(key.includes("product")){
+      orders[key.substr(7, 11)] = 0;
     }
   }
-  //合計金額
-  total = document.getElementById("total");
+  //hiddenタグ
+  for(var key in document.getElementsByTagName("input")){
+    if(key.includes("hidden")){
+      hiddens[key.substr(6, 10)] = document.orderForm[key];
+    }
+  }
 }
 
-//ボタンクリック
-function onClick(id, operator){
-  //表示用カウント増やす
-  if(operator == "+"){
-    counts[id + "Counter"]++;
+//+,-ボタンで数量加減算
+function calc(id, name, operator){
+  if(operator == "+" && orders[name] >= 0){
+    orders[name]++;
   }
-  //表示用カウント減らす
-  if(operator == "-"){
-    counts[id + "Counter"]--;
-    if(counts[id + "Counter"] < 1){
-      counts[id + "Counter"] = 0;
+  if(operator == "-" && orders[name] > 0){
+    orders[name]--;
+  }
+  spans[id].textContent = orders[name];
+  hiddens[id].value = spans[id].textContent;
+}
+
+//注文ボタン
+function order(){
+  //確認ダイアログに表示する文字列作成
+  var tmp = "";
+  for(key in orders){
+    if(orders[key] != 0){
+      tmp += key + ": " + orders[key] + "個\n";
     }
   }
-  //spanタグに値をセット
-  spans[id + "Counter"].textContent = counts[id + "Counter"];
-  //hiddenフォームに値をセット
-  amounts[id + "Count"].value = counts[id + "Counter"];
-  totals[id + "Total"] = amounts[id + "Count"].value * prices[id + "Price"].value;
-  //合計金額計算
-  var t = 0;
-  for(val in totals){
-    t += totals[val];
+  tmp += "\n以上を注文しますよろしいですか？"
+
+  //YES: 送信, NO: キャンセル
+  if(confirm(tmp)){
+    var param = "";
+    for(key in hiddens){
+      if(hiddens[key] != 0){
+        param += "&" + "order=" + key + hiddens[key];
+      }
+    }
+    return true;
   }
-  //合計金額代入
-  total.textContent = t;
-  postTotal.value = t;
+  else{
+    alert("キャンセルしました");
+    return false;
+  }
 }

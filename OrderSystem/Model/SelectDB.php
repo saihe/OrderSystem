@@ -29,7 +29,7 @@ class SelectDB{
       }
       $i = null;
     }catch (PDOExeption $e){
-      throw new OrderSystemException("M001");
+      throw new OrderSystemException("M002");
     }
     finally{
       return $records;

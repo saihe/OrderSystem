@@ -2,11 +2,12 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="../../CSS/common.css">
+  <script src="../../JS/Counter.js"></script>
 </head>
 <title>メニュー</title>
-<body>
+<body onload="onLoad()">
   <div id="content">
-    <form method="POST" action="../Controller/MainController.php">
+    <form name="orderForm" method="POST" action="../Controller/MainController.php" onSubmit="return order()">
       <?php
         include "../Util/SessionRun.php";
         include "../Util/PrintErrMsg.php";
