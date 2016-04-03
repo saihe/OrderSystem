@@ -13,20 +13,20 @@ foreach($rec as $key => $val){
   echo <<<TABLE
   <tr>
     <td>
-      {$product -> getName()}
+      <span id="product{$product -> getName()}">{$product -> getName()}</p>
     </td>
     <td>
-      {$product -> getPrice()}
+      {$product -> getPrice()}円
     </td>
     <td>
-      <input type="button" value="+" name="inc{$product -> getId()}">
+      <input type="button" value="+" name="inc{$product -> getId()}" onClick="calc('{$product -> getId()}', '{$product -> getName()}', '+')">
     </td>
     <td>
-      <input type="button" value="-" name="dec{$product -> getId()}">
+      <input type="button" value="-" name="dec{$product -> getId()}" onClick="calc('hidden{$product -> getId()}', '{$product -> getName()}', '-')">
     </td>
     <td>
-      0
-      <input type="hidden" value="0" name="{$product -> getId()}">
+      <span id="span{$product -> getId()}">0</span>
+      <input type="hidden" value="0" name="hidden{$product -> getId()}">
     </td>
   </tr>
 TABLE;

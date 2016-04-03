@@ -13,12 +13,13 @@ $path = array(
   "confirm" => $view . "/confirm.php"
 );
 
-//GETメソッドを使っていたら
-if(!empty($_GET["ancer"])){
-  $ancer = $_GET["ancer"];
-  //レコード格納用
-  $result = array();
-  try{
+try{
+  session_start();
+  //GETメソッドを使っていたら
+  if(!empty($_GET["ancer"])){
+    $ancer = $_GET["ancer"];
+    //レコード格納用
+    $result = array();
     $accessDB = AccessDB::getInstanse();
     $selectCon = new SelectController();
 
@@ -38,33 +39,41 @@ if(!empty($_GET["ancer"])){
       $result = $selectCon -> selectTable($accessDB -> getPDO(), array("cord", "name", "unit_price"), "products", 2);
       $location = $path["menu"]. "?ancer=". $ancer;
     }
-    session_start();
     //商品一覧をクッキーに格納
     for($i = 0; $i < count($result); $i++){
       $_SESSION["record" . $i] = $result[$i];
-    }
-    if($_GET["ancer"] == "confirm"){
-      $location = $path["confirm"];
     }
 
     /**
     *注文履歴一覧
     */
-  }catch(OrderSystemException $e){
-    $location = $path["top"];
-    $_SESSION["ErrMsg"] = $e -> getMessage();
-  }finally{
-    session_write_close();
-    header("Location: " . $location);
+    if($_GET["ancer"] == "confirm"){
+      $location = $path["confirm"];
+    }
   }
+  //注文が送信されたら
+  else if(!empty($_POST["submit"])){
+    $location = $path["menu"] + "?ancer=all";
+    $tmp = array();
+    //注文した商品のみ取得
+    foreach($_POST as $key => $value){
+      if(strstr($key, "hidden") && $value != "0"){
+        $tmp[substr($key, 6, 10)] = $value;
+      }
+    }
+  }
+  //リクエストパラメータがなかったら
+  else{
+    throw new OrderSystemException("M001");
+  }
+}catch(OrderSystemException $e){
+  $location = $path["top"];
+  $_SESSION["ErrMsg"] = $e -> getMessage();
+}finally{
+  session_write_close();
+  if(empty($location)){
+    $location = $path["top"];
+  }
+  header("Location: " . $location);
 }
-//POSTメソッド使っていたら
-else if(!empty($_POST["submit"])){
-  var_dump($_POST);
-}
-//何かあったら
-else{
-  header("Location: ../View/top.php");
-}
-
 ?>
