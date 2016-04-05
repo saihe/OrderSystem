@@ -4,7 +4,8 @@ class OrderSystemException extends Exception{
   const ErrMsg  = array(
                     "S" => array(
                       "S001" => "DB接続エラー",
-                      "S002" => "通信エラー"
+                      "S002" => "通信エラー",
+                      "S003" => "DB送信エラー"
                     ),
                     "M" => array(
                       "M001" => "URLが無効です",

@@ -15,7 +15,6 @@ class SelectDB{
     $records = array();
     try{
       //クエリ実行
-      var_dump($sql);
       $stmt = $PDO -> prepare($sql);
       $res = $stmt -> execute();
 

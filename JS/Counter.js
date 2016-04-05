@@ -56,6 +56,7 @@ function order(){
         param += "&" + "order=" + key + hiddens[key];
       }
     }
+    alert("注文しました！");
     return true;
   }
   else{

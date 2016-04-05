@@ -2,25 +2,29 @@
 //クラスインポート
 require_once "../Model/AccessDB.php";
 require_once "../Model/SelectController.php";
+require_once "../Model/InsertController.php";
 require_once "../Model/Product.php";
 
 //行先パス定義
 $location;
 $view = "../View";
 $path = array(
+  "controller" => "../Controller/MainController.php",
   "top" => $view . "/top.php",
   "menu" => $view . "/menu.php",
   "confirm" => $view . "/confirm.php"
 );
+//PDOを持つクラス
+$accessDB;
 
 try{
+  $accessDB = AccessDB::getInstanse();
   session_start();
   //GETメソッドを使っていたら
   if(!empty($_GET["ancer"])){
     $ancer = $_GET["ancer"];
     //レコード格納用
     $result = array();
-    $accessDB = AccessDB::getInstanse();
     $selectCon = new SelectController();
 
     /**
@@ -53,7 +57,8 @@ try{
   }
   //注文が送信されたら
   else if(!empty($_POST["submit"])){
-    $location = $path["menu"] + "?ancer=all";
+    //注文履歴格納用
+    $insertCon = new InsertController();
     $tmp = array();
     //注文した商品のみ取得
     foreach($_POST as $key => $value){
@@ -61,6 +66,12 @@ try{
         $tmp[substr($key, 6, 10)] = $value;
       }
     }
+    //insert実行
+    foreach($tmp as $key => $val){
+      //$_SERVER["REQUEST_TIME"]
+      $res = $insertCon -> insertOrder($accessDB -> getPDO(), array(1, "'". $key. "'", $val), "histories");
+    }
+    $location = $path["controller"]. "?ancer=all";
   }
   //リクエストパラメータがなかったら
   else{
@@ -70,10 +81,11 @@ try{
   $location = $path["top"];
   $_SESSION["ErrMsg"] = $e -> getMessage();
 }finally{
-  session_write_close();
+  $accessDB = null;
   if(empty($location)){
     $location = $path["top"];
   }
+  session_write_close();
   header("Location: " . $location);
 }
 ?>
