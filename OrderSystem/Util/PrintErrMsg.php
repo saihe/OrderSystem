@@ -1,5 +1,4 @@
 <?php
-//session_start(["read_and_close" => true]);
 if(isset($_SESSION["ErrMsg"])){
   echo <<<ErrMsg
   <div>

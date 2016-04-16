@@ -16,10 +16,10 @@ $path = array(
 );
 //PDOを持つクラス
 $accessDB;
+session_start();
 
 try{
   $accessDB = AccessDB::getInstanse();
-  session_start();
   //GETメソッドを使っていたら
   if(!empty($_GET["ancer"])){
     $ancer = $_GET["ancer"];
