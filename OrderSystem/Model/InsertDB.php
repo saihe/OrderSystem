@@ -19,6 +19,5 @@ class InsertDB{
       return $res;
     }
   }
-
 }
 ?>
