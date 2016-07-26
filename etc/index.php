@@ -1,3 +1,3 @@
 <?php
-header("Location: ./OrderSystem/index.php");
+header("Location: ./Sources/index.php");
 ?>
