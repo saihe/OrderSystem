@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="../../CSS/common.css">
-  <script src="../../JS/Counter.js"></script>
+  <script src="../JS/Counter.js"></script>
 </head>
 <title>メニュー</title>
 <body onload="onLoad()">
